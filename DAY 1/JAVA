@@ -1,0 +1,11 @@
+Day 1: Java Fundamentals and Problem-Solving 📚
+
+JavaBasics.java: A Java program that demonstrates:
+User input using Scanner class 📝
+Data types (primitive and reference types) 📊
+Type casting (implicit and explicit) 🔀
+Variables (declaration, initialization, and usage) 💡
+AddTwoNumbers.java: A Java program that takes two numbers as input from the user and prints their sum 🤔
+GeeksforGeeksProblems.java: A Java program that solves several problems on GeeksforGeeks, including:
+Getting int and string values from user input and printing them 📝
+Other problems (add more as you solve them!) 🎉
