@@ -1,0 +1,14 @@
+Day 2: Conditional Statements, Loop Statements, and Problem-Solving 📚
+
+ConditionalStatements.java: A Java program that demonstrates:
+Decision making using if-else statements 🤔: This program shows how to use if-else statements to make decisions based on conditions.
+Jump statements (break, continue, return) ⏭️: The program illustrates the use of jump statements to control the flow of a program.
+Loop statements (for, while, do-while) 🔁: The program demonstrates the use of loop statements to repeat a block of code.
+ProblemSolving.java: A Java program that solves several problems, including:
+Swapping two numbers without using a temporary variable 🔄: This program shows how to swap two numbers without using a temporary variable.
+Converting temperature from Celsius to Fahrenheit ❄️: The program demonstrates how to convert temperature from Celsius to Fahrenheit.
+Generating Fibonacci numbers 🔢: The program generates Fibonacci numbers up to a given number.
+Checking if a number is an Armstrong number 🤔: The program checks if a number is an Armstrong number.
+Determining if a number is odd or even 📊: The program determines if a number is odd or even.
+Checking if a string is a palindrome 🔁: The program checks if a string is a palindrome.
+Calculating the factorial of a number 📝: The program calculates the factorial of a number.
