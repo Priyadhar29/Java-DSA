@@ -1,0 +1,11 @@
+Day 4: Functions in Java 🎉
+
+Functions.java: A Java program that demonstrates various concepts related to functions, including:
+Static vs Instance Methods: The program shows the difference between static and instance methods.
+Call by Value: The program demonstrates how Java passes parameters by value.
+Return Types: The program uses different return types, including strings, integers, and arrays.
+Parameter Passing: The program passes parameters to methods, including strings, integers, and arrays.
+Swap Values: The program swaps values using pass-by-value.
+Change Values in Arrays: The program modifies array elements using methods.
+Abstract Methods: The program uses abstract methods in an abstract class.
+Instance and Final Methods: The program demonstrates instance and final methods.
