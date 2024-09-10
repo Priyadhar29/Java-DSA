@@ -1,0 +1,4 @@
+Day 5: Scope, Shadowing, Varargs, and Method Overloading in Java 🎉
+
+ArmstrongNumber.java: A Java program that checks if a number is an Armstrong number using varargs and method overloading.
+PrimeNumber.java: A Java program that checks if a number is a prime number using method overloading.
