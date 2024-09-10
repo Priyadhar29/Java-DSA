@@ -1,0 +1,33 @@
+Day 8: Garbage Collection, Finalize, Packages, and Static Members in Java
+Welcome to Day 8 of my Java learning journey! 🎉
+
+Garbage Collection
+Learned about Java's garbage collection mechanism and how it helps with memory management
+Explored the different types of garbage collection in Java, including mark-and-sweep and generational garbage collection
+The finalize() Method
+Discovered the role of the finalize() method in object destruction
+Learned about the importance of overriding the finalize() method in certain situations
+Packages and Import Statements
+Explored the concept of packages in Java and how they're used to organize classes and interfaces
+Learned about the import statement and how it's used to import classes and interfaces from other packages
+Static and Non-Static Members
+Learned about the differences between static and non-static members in Java
+Explored how to access static and non-static members, including static variables and methods
+Discovered how to use static members inside non-static methods and vice versa
+Initialization of Static Variables
+Learned about the initialization of static variables in Java, including the order of initialization
+Explored how to use static blocks to initialize static variables
+Inner Classes
+Discovered the concept of inner classes in Java and how they're used to create nested classes
+Learned about the different types of inner classes, including static and non-static inner classes
+Code Examples
+Check out my code examples for Day 8, including a demonstration of garbage collection, a class that overrides the finalize() method, a package example, and a class that showcases the use of static and non-static members.
+
+What's Next?
+Stay tuned for more updates as I continue my Java learning journey! 💻💸
+
+License
+This repository is licensed under the MIT License. See LICENSE for details.
+
+Contributing
+If you'd like to contribute to this repository, please fork it and submit a pull request. I'd love to hear your feedback and suggestions!
