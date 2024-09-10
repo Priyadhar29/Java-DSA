@@ -1,0 +1,11 @@
+Day 3: Pattern Printing in Java 🎨
+
+PatternPrinting.java: A Java program that prints various patterns, including:
+Half Pyramid ⛰️: This program prints a half pyramid pattern using nested loops, where the number of rows and columns can be customized.
+Pyramid ⛰️: The program prints a pyramid pattern using nested loops, where the number of rows and columns can be customized.
+Hollow Pyramid ⛰️: The program prints a hollow pyramid pattern using nested loops, where the number of rows and columns can be customized.
+Rhombus ♦️: The program prints a rhombus pattern using nested loops, where the number of rows and columns can be customized.
+Diamond ✨: The program prints a diamond pattern using nested loops, where the number of rows and columns can be customized.
+Butterfly 🦋: The program prints a butterfly pattern using nested loops, where the number of rows and columns can be customized.
+Fibonacci Square 🔢: The program prints a Fibonacci square pattern using nested loops, where the number of rows and columns can be customized.
+And many more! 🎨: The program prints many other patterns using nested loops and conditional statements.
