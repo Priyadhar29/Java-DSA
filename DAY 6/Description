@@ -1,0 +1,22 @@
+Day 6: Classes, Objects, and Constructors in Java
+Welcome to Day 6 of my Java learning journey! 🎉
+
+Classes and Objects
+Learned about class and object basics, including how to declare classes and create objects
+Explored the concept of classes as blueprints for objects
+Constructors
+Learned about default constructors, constructor overloading, and calling a constructor from another constructor
+Discovered how constructors are used to initialize objects
+The this Keyword
+Explored the uses of the this keyword in Java, including referencing the current object and distinguishing between instance variables and method parameters
+Code Examples
+Check out my code examples for Day 6, including a simple class with a default constructor, a class with constructor overloading, and a class that demonstrates the use of the this keyword.
+
+What's Next?
+Stay tuned for more updates as I continue my Java learning journey! 🚀💻
+
+License
+This repository is licensed under the MIT License. See LICENSE for details.
+
+Contributing
+If you'd like to contribute to this repository, please fork it and submit a pull request. I'd love to hear your feedback and suggestions!
