@@ -1,0 +1,29 @@
+Day 7: Memory Allocation, Wrapper Classes, and Final Keyword in Java
+Welcome to Day 7 of my Java learning journey! 🎉
+
+Memory Allocation and the new Keyword
+Learned about how memory is allocated for objects in Java
+Explored the role of the new keyword in creating objects and allocating memory
+Wrapper Classes
+Discovered the concept of wrapper classes and how they're used to convert primitive types to objects
+Learned about the different wrapper classes in Java, including Integer, Double, and Boolean
+The final Keyword
+Explored the uses of the final keyword in Java, including final variables, methods, and classes
+Learned about blank final variables and how they're used
+Code Examples
+Check out my code examples for Day 7, including a demonstration of memory allocation with the new keyword, a wrapper class example, and a class that showcases the use of final variables and methods.
+
+What's Next?
+Stay tuned for more updates as I continue my Java learning journey! 💻💸
+
+License
+This repository is licensed under the MIT License. See LICENSE for details.
+
+Contributing
+If you'd like to contribute to this repository, please fork it and submit a pull request. I'd love to hear your feedback and suggestions!
+
+Let me know if you'd like me to help with the commit message and description as well! 😊
+
+
+
+
