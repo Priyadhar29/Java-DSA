@@ -1,0 +1,36 @@
+Singleton Class: A Singleton class is a class that can have only one instance, and provides a global point of access to that instance. 
+It's useful when we need to control the instantiation of a class, and ensure that only one object is created. 
+
+OOPS Concepts: I also learned about the principles of Object-Oriented Programming (OOPS), including:
+
+Inheritance: A mechanism that allows one class to inherit the properties and behavior of another class. 👪
+Super and This Keywords: super is used to access the parent class, while this is used to access the current object. 👨‍👩‍👧‍👦
+
+📈Code Updates: I've updated the repository with the following code examples:
+
+Animal and Dog classes demonstrating the use of super keyword in Inheritance
+Dog class example showcasing the use of this keyword to access instance variables
+
+EXAMPLE:
+
+class Person{
+    String name;
+    Person(String name){
+        this.name = name;
+        System.out.println("Person " + this.name);
+    }
+}
+
+class employee extends Person{
+    employee(String name){
+        super(name);
+        System.out.println("Employee " + super.name);
+    }
+}
+
+public class Main {
+    public static void main(String args[]){
+        employee e1 = new employee("Priya");
+        System.out.println(e1.name);
+   }
+}
