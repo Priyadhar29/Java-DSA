@@ -1,0 +1,19 @@
+Day 12: Arrays and ArrayList in Java 📚💻
+
+Today, I dove into the world of arrays and ArrayList in Java, exploring their syntax, passing them as function parameters, and learning about 2D arrays. I also practiced solving problems on LeetCode, including concatenation of arrays, richest wealth, and adding 1D arrays. 🤓
+
+Arrays Syntax: In Java, an array is a collection of elements of the same data type stored in contiguous memory locations. The syntax for declaring an array is:
+
+Passing Arrays as Function Parameters: Arrays can be passed as parameters to functions, allowing for flexible and reusable code. Here's an example:
+
+2D Arrays: A 2D array is a collection of arrays, where each element is an array itself. The syntax for declaring a 2D array is:
+
+ArrayList: An ArrayList is a resizable array implementation of the List interface. It provides more flexibility and functionality than traditional arrays. Here's an example:
+
+Internal Working: I also learned about the internal working of arrays and ArrayList, including how they store elements, manage memory, and handle operations like insertion and deletion.
+
+LeetCode Problems: I practiced solving the following problems on LeetCode:
+
+Concatenation of arrays
+Richest wealth
+Adding 1D arrays
