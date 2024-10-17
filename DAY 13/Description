@@ -1,0 +1,9 @@
+Searching for Success? 🚀 Learn Linear Search in Java! 📊💻
+
+I'm thrilled to share Day 13 of my Java learning journey, where I dove deep into Linear Search! 🤓
+
+From grasping the intricacies of time complexity to implementing searches with both integer and string values, this day was packed with insights! 📝
+
+🔍 Did you know? Linear Search can have a best-case scenario of O(1) when the target is found at the first index, but it can also reach a worst-case scenario of O(n) if the element isn't present! 🤯
+
+💡 I also explored how to apply Linear Search to find elements within specific ranges and even in 2D arrays! 📈
