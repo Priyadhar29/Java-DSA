@@ -1,0 +1,12 @@
+Day 15: Binary Search in 2D Arrays
+In my ongoing Java learning journey, I have explored Binary Search in 2D Arrays. This section covers the techniques for searching in matrices, particularly focusing on sorted matrices.
+
+Key Concepts
+Searching in a Matrix: Treating a 2D array as a 1D array to perform Binary Search.
+Searching in a Sorted Matrix: Utilizing the sorted property of the matrix to efficiently find target elements by applying Binary Search to both rows and columns.
+Problems Solved
+To reinforce my understanding, I tackled several problems on GeeksforGeeks and LeetCode:
+
+Row with Max 1s (GeeksforGeeks): Find the row with the maximum number of 1s in a binary matrix.
+240. Search a 2D Matrix II (LeetCode): Search for a target element in a sorted 2D matrix.
+74. Search a 2D Matrix (LeetCode): Another problem focused on searching for a target element in a sorted 2D matrix.
