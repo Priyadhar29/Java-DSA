@@ -1,0 +1,18 @@
+Day 16: Sorting Algorithms - Bubble Sort
+Continuing my Java learning journey, I delved into Sorting Algorithms, focusing on Bubble Sort. This section covers the mechanics, time complexities, and characteristics of Bubble Sort.
+
+Key Concepts
+Bubble Sort: A straightforward sorting algorithm that compares adjacent elements and swaps them if they are in the wrong order.
+
+Time Complexities:
+
+Best Case: O(n)
+Worst Case: O(n²)
+Space Complexity: O(1) - In-place sorting.
+
+Stable vs. Unstable Sorting:
+
+Stable Sorting: Maintains the order of equal elements (Bubble Sort).
+Unstable Sorting: Does not guarantee the order of equal elements.
+Practical Implementation
+I implemented Bubble Sort and solved related problems on GeeksforGeeks to reinforce my understanding.
