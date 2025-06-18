@@ -1,3 +1,28 @@
+Problem
+Given a positive integer N, print the product of all digits present in N.
+
+Input Format
+- A single integer N (1 <= N <= 10^9) representing the number.
+
+Output Format
+- Print the product of all digits present in N.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+1234
+Sample Output 1
+
+one two three four
+Sample Input 2
+
+98765
+Sample Output 2
+
+nine eight seven six five
+
+Code:
+
 import java.util.Scanner;
 
 class Main {
@@ -27,17 +52,3 @@ class Main {
     }
 
 }
-
-Sample Inputs & Outputs
-Sample Input 1
-
-1234
-Sample Output 1
-
-one two three four
-Sample Input 2
-
-98765
-Sample Output 2
-
-nine eight seven six five
