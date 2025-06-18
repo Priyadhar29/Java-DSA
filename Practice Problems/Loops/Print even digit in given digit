@@ -1,0 +1,48 @@
+Problem
+Given a positive integer N, print all even digits present in the number.
+
+Input Format
+A single integer N (1 <= N <= 10^9) representing the number.
+
+Output Format
+Print all even digits present in the number, each separated by a space. If no even digits are present, print "No even digits".
+
+Sample Inputs & Outputs
+Sample Input 1
+
+1234
+Sample Output 1
+
+2 4
+Sample Input 2
+
+98765
+Sample Output 2
+
+8 6
+Constraints
+1 <= N <= 10^9
+
+Code:
+
+import java.util.Scanner;
+public class EvenDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        String result = getEvenDigits(n);
+        System.out.println(result);
+    }
+    // Method that returns a string with even digits separated by spaces or a message if none
+    public static String getEvenDigits(int number) {
+        String numStr = String.valueOf(number);
+        StringBuilder evenDigits = new StringBuilder();
+        for (char digitChar : numStr.toCharArray()) {
+            if ((digitChar - '0') % 2 == 0) {  // Check if digit is even
+                evenDigits.append(digitChar).append(" ");
+            }
+        }
+        return evenDigits.length() > 0 ? evenDigits.toString().trim() : "No even digits";
+    }
+}
