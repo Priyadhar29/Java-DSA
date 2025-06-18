@@ -39,8 +39,9 @@ public class EvenDigits {
         String numStr = String.valueOf(number);
         StringBuilder evenDigits = new StringBuilder();
         for (char digitChar : numStr.toCharArray()) {
-            if ((digitChar - '0') % 2 == 0) {  // Check if digit is even
-                evenDigits.append(digitChar).append(" ");
+            int digit = Character.getNumericValue(digitChar);
+            if (digit % 2 == 0) {  // Check if digit is even
+                evenDigits.append(digit).append(" ");
             }
         }
         return evenDigits.length() > 0 ? evenDigits.toString().trim() : "No even digits";
