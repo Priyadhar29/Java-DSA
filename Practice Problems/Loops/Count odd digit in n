@@ -1,0 +1,49 @@
+Problem
+Given a positive integer N, print the number of odd digits present in the number.
+
+Input Format
+An integer N (1 <= N <= 10^9) representing the input number.
+
+Output Format
+Print the count of odd digits present in N.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+24681357
+Sample Output 1
+
+4
+Sample Input 2
+
+24682468
+Sample Output 2
+
+0
+Constraints
+1 <= N <= 10^9
+
+Code:
+
+import java.util.Scanner;
+public class OddDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String result = countOddDigits(n);
+        System.out.println(result);
+    }
+    // Method that returns a count of odd digits present in n 
+    public static int countOddDigits(int number) {
+        String numStr = String.valueOf(number);
+        StringBuilder oddDigits = new StringBuilder();
+        int count = 0 ;
+        for (char digitChar : numStr.toCharArray()) {
+            int digit = Character.getNumericValue(digitChar);
+            if (digit % 2 != 0) {  // Check if digit is odd
+               count++;
+            }
+        }
+        return count;
+    } 
+}
