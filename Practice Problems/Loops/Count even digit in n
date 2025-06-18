@@ -1,0 +1,49 @@
+Problem
+Given a positive integer N, print the number of even digits present in the number.
+
+Input Format
+A single integer N (1 <= N <= 10^9) representing the number.
+
+Output Format
+Print the number of even digits present in the number.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+1234
+Sample Output 1
+
+2
+Sample Input 2
+
+98765
+Sample Output 2
+
+2
+Constraints
+1 <= N <= 10^9
+
+Code:
+
+import java.util.Scanner;
+public class EvenDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String result = countEvenDigits(n);
+        System.out.println(result);
+    }
+    // Method that returns a count of even digits present in n 
+    public static int countEvenDigits(int number) {
+        String numStr = String.valueOf(number);
+        StringBuilder evenDigits = new StringBuilder();
+        int count = 0 ;
+        for (char digitChar : numStr.toCharArray()) {
+            int digit = Character.getNumericValue(digitChar);
+            if (digit % 2 == 0) {  // Check if digit is even
+               count++;
+            }
+        }
+        return count;
+    } 
+}
