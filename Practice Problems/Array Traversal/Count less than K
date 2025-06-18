@@ -1,0 +1,55 @@
+Problem
+Given an array of integers, count the number of elements which are lesser than k.
+
+Input Format
+The first line contains an integer N, the size of the array. The second line contains N space-separated integers representing the array elements. The third line contains an integer k.
+
+Output Format
+Print a single integer representing the count of elements lesser than k.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+10 5 20 7 12
+8
+Sample Output 1
+
+2
+Sample Input 2
+
+6
+-12 24 15 10 -20 36
+6
+Sample Output 2
+
+2
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9, -10^9 <= k <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class CountLessThanK {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int k = scanner.nextInt();
+        System.out.print(countLess(a,k));
+    }
+    public static int countLess(int[] a, int k){
+        int count = 0;
+        for (int num : arr) {
+            if (num < k ) {
+                count++;
+            }
+        }
+        return count;
+        scanner.close();
+    }
+}
