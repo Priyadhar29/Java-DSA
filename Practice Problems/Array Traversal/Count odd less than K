@@ -8,26 +8,22 @@ The first line contains an integer N, the size of the array. The second line con
 Output Format
 Print a single integer representing the count of elements lesser than k and even.
 
-Sample Inputs & Outputs
 Sample Input 1
 
 5
-10 5 21 7 12
+10 5 20 7 12
 15
-
 Sample Output 1
 
-1
-
+2
 Sample Input 2
 
 6
--12 27 15 10 -20 31
+-12 24 15 10 -20 36
 5
-
 Sample Output 2
 
-3
+0
 
 Constraints
 1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9, -10^9 <= k <= 10^9
