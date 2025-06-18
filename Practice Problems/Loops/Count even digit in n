@@ -36,7 +36,6 @@ public class EvenDigits {
     // Method that returns a count of even digits present in n 
     public static int countEvenDigits(int number) {
         String numStr = String.valueOf(number);
-        StringBuilder evenDigits = new StringBuilder();
         int count = 0 ;
         for (char digitChar : numStr.toCharArray()) {
             int digit = Character.getNumericValue(digitChar);
