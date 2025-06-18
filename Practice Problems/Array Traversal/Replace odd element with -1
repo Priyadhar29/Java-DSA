@@ -1,0 +1,53 @@
+Problem
+Given an array of integers, replace all odd elements with -1.
+
+Input Format
+The first line contains an integer N, the size of the array. The second line contains N space-separated integers representing the array elements.
+
+Output Format
+Print the modified array where all odd elements are replaced with -1, separated by a space.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+1 2 3 4 5
+Sample Output 1
+
+-1 2 -1 4 -1
+Sample Input 2
+
+6
+-3 -2 -1 0 1 2
+Sample Output 2
+
+-1 -2 -1 0 -1 2
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class ReplaceDigit {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        scanner.close();
+
+        // Replace elements based on the conditions
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % 2 != 0) {
+                arr[i] = -1; // Replace negative divisible values with -1
+            }
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
