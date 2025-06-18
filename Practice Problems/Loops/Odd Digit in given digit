@@ -1,0 +1,48 @@
+Problem
+Given a positive integer N, print all the odd digits present in the number.
+
+Input Format
+An integer N (1 <= N <= 10^9) representing the input number.
+
+Output Format
+Print all the odd digits present in N, each separated by a space. If no odd digits are present, print "No odd digits".
+
+Sample Inputs & Outputs
+Sample Input 1
+
+24681357
+Sample Output 1
+
+1 3 5 7
+Sample Input 2
+
+24682468
+Sample Output 2
+
+No odd digits
+Constraints
+1 <= N <= 10^9
+
+Code:
+
+import java.util.Scanner;
+public class OddDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        String result = getOddDigits(n);
+        System.out.println(result);
+    }
+    // Method that returns a string with odd digits separated by spaces or a message if none
+    public static String getOddDigits(int number) {
+        String numStr = String.valueOf(number);
+        StringBuilder oddDigits = new StringBuilder();
+        for (char digitChar : numStr.toCharArray()) {
+            if ((digitChar - '0') % 2 != 0) {  // Check if digit is odd
+                oddDigits.append(digitChar).append(" ");
+            }
+        }
+        return oddDigits.length() > 0 ? oddDigits.toString().trim() : "No odd digits";
+    }
+}
