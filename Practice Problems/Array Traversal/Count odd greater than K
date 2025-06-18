@@ -12,15 +12,15 @@ Sample Inputs & Outputs
 Sample Input 1
 
 5
-10 5 20 7 12
+10 5 21 17 12
 15
 Sample Output 1
 
-1
+2
 Sample Input 2
 
 6
--12 24 15 10 -20 36
+-12 29 15 10 -20 35
 5
 Sample Output 2
 
