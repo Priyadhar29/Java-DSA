@@ -1,0 +1,59 @@
+Problem
+Given an array of integers, sort the given array in descending order.
+
+Input Format
+The first line contains an integer N, the size of the array.
+
+The second line contains N space-separated integers representing the array elements.
+
+Output Format
+Print the sorted array in descending order separated by space.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+5 2 7 1 3
+Sample Output 1
+
+7 5 3 2 1
+Sample Input 2
+
+6
+9 4 6 2 8 3
+Sample Output 2
+
+9 8 6 4 3 2
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9
+
+Code:
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArraySorter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        
+        // Sort the array
+        Arrays.sort(arr);
+        
+        // Print the sorted array
+        for (int i = n - 1; i >= 0 ; i--) {
+            System.out.print(arr[i]+" ");
+        }
+        
+        scanner.close();
+    }
+}
