@@ -39,8 +39,9 @@ public class OddDigits {
         String numStr = String.valueOf(number);
         StringBuilder oddDigits = new StringBuilder();
         for (char digitChar : numStr.toCharArray()) {
-            if ((digitChar - '0') % 2 != 0) {  // Check if digit is odd
-                oddDigits.append(digitChar).append(" ");
+           int digit = Character.getNumericValue(digitChar);
+            if (digit % 2 != 0) {  // Check if digit is odd
+                oddDigits.append(digit).append(" ");
             }
         }
         return oddDigits.length() > 0 ? oddDigits.toString().trim() : "No odd digits";
