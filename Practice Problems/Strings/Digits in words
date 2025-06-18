@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int n =scanner.nextInt();
+
+        String []word ={"zero","one","two","three","four","five","six","seven","eight","nine"};
+
+        String s="";
+
+        while(n > 0){
+
+            s = word[n%10]+s;
+
+            s=" "+s;
+
+            n/=10;
+
+        }
+
+        System.out.println(s.trim());
+
+    }
+
+}
+
+Sample Inputs & Outputs
+Sample Input 1
+
+1234
+Sample Output 1
+
+one two three four
+Sample Input 2
+
+98765
+Sample Output 2
+
+nine eight seven six five
