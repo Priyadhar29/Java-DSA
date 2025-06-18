@@ -1,0 +1,58 @@
+Problem
+Given a positive integer N, print "Prime" if the sum of all its digits is prime, and print "Not Prime" otherwise.
+
+Input Format
+An integer N (1 <= N <= 10^9) representing the input number.
+Output Format
+Print "Prime" if the sum of all digits of N is prime, and "Not Prime" otherwise.
+Sample Inputs & Outputs
+Sample Input 1
+
+123
+Sample Output 1
+
+Not Prime
+Sample Input 2
+
+456
+Sample Output 2
+
+Not Prime
+Constraints
+1 <= N <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the integer input N
+        int num = scanner.nextInt();
+        
+        int last = 0;
+        int sum = 0;
+        while (num > 0) {
+            last = num % 10; // Find the last digit 
+            sum += last; //Add the last digit to the sum
+            num /= 10; // Remove the last digit
+        }
+        System.out.print(isPrime(sum));
+
+        // Close the scanner
+        scanner.close();
+    }
+    
+    // Method to check if a number is prime
+    private static String isPrime(int sum) {
+        if (sum <= 1) return "Not Prime"; // 0 and 1 are not prime
+        
+        // Check for factors from 2 to the square root of num
+        for (int i = 2; i * i <= sum; i++) {
+            if (sum % i == 0) return "Not Prime"; // Found a factor, not prime
+        }
+        return "Prime"; // No factors found, it's prime
+    }
+}
