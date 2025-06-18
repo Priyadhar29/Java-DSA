@@ -1,0 +1,66 @@
+Problem
+Given two positive integers N and M, print the first N prime numbers greater than M.
+
+Input Format
+- Two integers N and M (1 <= N, M <= 10^5) representing the number of prime numbers to print and the starting point.
+
+Output Format
+- Print the first N prime numbers greater than M, each separated by a space.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5 10
+Sample Output 1
+
+11 13 17 19 23
+Sample Input 2
+
+3 20
+Sample Output 2
+
+23 29 31
+Constraints
+1 <= N, M <= 10^5
+
+Code:
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read input values for N and M
+        int N = scanner.nextInt();
+        int M = scanner.nextInt();
+        primeUpto(N,M);
+    }
+    public static void primeUpto(int N, int M){
+        int count = 0; // Count of found prime numbers
+        int number = M + 1; // Start checking from the next number after M
+        
+        // Loop until we find N prime numbers
+        while (count < N) {
+            if (isPrime(number)) {
+                System.out.print(number + " "); // Print the prime number
+                count++; // Increment the count of found primes
+            }
+            number++; // Check the next number
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+    
+    // Method to check if a number is prime
+    private static boolean isPrime(int num) {
+        if (num <= 1) return false; // 0 and 1 are not prime
+
+        // Check for factors from 2 to the square root of num
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false; // Found a factor, not prime
+        }
+        return true; // No factors found, it's prime
+    }
+}
