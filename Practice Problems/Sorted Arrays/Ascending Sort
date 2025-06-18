@@ -1,0 +1,57 @@
+Problem
+Given an array of integers, sort the given array in ascending order.
+
+Input Format
+First line contains an integer n representing the size of the array. Second line contains n space separated integers values.
+
+Output Format
+Print the sorted array in ascending order separated by space.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+5 2 7 1 3
+Sample Output 1
+
+1 2 3 5 7
+Sample Input 2
+
+6
+9 4 6 2 8 3
+Sample Output 2
+
+2 3 4 6 8 9
+Constraints
+1 <= N <= 10^5, -10^5 <= arr[i] <= 10^5
+
+Code:
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArraySorter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        
+        // Sort the array
+        Arrays.sort(arr);
+        
+        // Print the sorted array
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        
+        scanner.close();
+    }
+}
