@@ -1,0 +1,66 @@
+Problem
+Given a sorted array of integers, print all the unique elements present in the odd index of the array.
+
+Input Format
+First line contains an integer n representing the size of the array. Second line contains n space separated integers values.
+
+Output Format
+Print all the unique elements present in the odd index of the array separated by space. If there is no unique element in the array at odd index print -1.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+9
+1 2 3 4 5 6 7 8 9
+Sample Output 1
+
+2 4 6 8
+Sample Input 2
+
+9
+-3 -2 -1 0 1 2 3 4 5
+Sample Output 2
+
+-2 0 2 4
+Constraints
+1 <= N <= 10^5, -10^5 <= arr[i] <= 10^5
+
+Code:
+
+import java.util.Scanner;
+
+public class UniqueOddIndexNoExtraArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();            // Size of array
+        int[] arr = new int[n];          // Input array
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();       // Read elements
+        }
+
+        boolean found = false;
+
+        for (int i = 1; i < n; i += 2) {
+            boolean isDuplicate = false;
+
+            // Check previous odd indices for duplicates
+            for (int j = 1; j < i; j += 2) {
+                if (arr[i] == arr[j]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate) {
+                System.out.print(arr[i] + " ");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("-1");
+        }
+    }
+}
