@@ -1,0 +1,82 @@
+Problem
+Given an array of integers, count the number of elements which are greater than k and prime.
+
+Input Format
+The first line contains an integer N, the size of the array. The second line contains N space-separated integers representing the array elements. The third line contains an integer k.
+
+Output Format
+Print a single integer representing the count of elements greater than k and prime.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+10 5 20 7 12
+5
+Sample Output 1
+
+1
+Sample Input 2
+
+6
+-12 24 15 10 -20 36
+5
+Sample Output 2
+
+0
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9, -10^9 <= k <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class CountGreaterThanKAndPrime {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        // Read the value of k
+        int k = scanner.nextInt();
+
+        // Calculate and print the count of elements greater than k and prime
+        System.out.println(countGreaterThanKAndPrime(arr, n, k));
+
+        scanner.close();
+    }
+
+    public static int countGreaterThanKAndPrime(int[] arr, int n, int k) {
+        int count = 0;
+
+        for (int num : arr) {
+            if (num > k && isPrime(num)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
