@@ -1,0 +1,56 @@
+Problem
+Given an array of integers of size N, print the product of all elements present in the even indices of the array.
+
+Input Format
+The first line contains an integer N, the size of the array. The second line contains N space-separated integers representing the array elements.
+
+Output Format
+Print the product of all elements present in the even indices of the array.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+1 2 3 4 5
+Sample Output 1
+
+15
+Sample Input 2
+
+4
+-2 0 3 6
+Sample Output 2
+
+-6
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class EvenIndexProduct {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        prodEveIndex(a);
+    }
+    public static void prodEveIndex(int[] arr){
+        long product = 1;
+        boolean hasEvenIndex = false;
+        for (int i = 0; i < n; i += 2) {
+            product *= arr[i];
+            hasEvenIndex = true;
+        }
+        if (hasEvenIndex) {
+            System.out.println(product);
+        } else {
+            System.out.println(0);
+        }
+    }
+}
