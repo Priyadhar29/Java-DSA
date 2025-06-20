@@ -1,0 +1,57 @@
+Problem
+Given an array of integers of size N, print the product of all elements present in the odd indices of the array.
+
+Input Format
+The first line contains an integer N, the size of the array. The second line contains N space-separated integers representing the array elements.
+
+Output Format
+Print the product of all elements present in the odd indices of the array, if there is no odd index elements print 0
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+1 2 3 4 5
+Sample Output 1
+
+8
+Sample Input 2
+
+4
+-2 0 3 6
+Sample Output 2
+
+0
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class OddIndexProduct {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        prodOddIndex(arr);
+    }
+    public static void prodOddIndex(int[] arr){
+        long product = 1;
+        boolean hasOddIndex = false;
+        for (int i = 1; i < n; i += 2) {
+            product *= arr[i];
+            hasOddIndex = true;
+        }
+
+        if (hasOddIndex) {
+            System.out.println(product);
+        } else {
+            System.out.println(0);
+        }
+    }
+}
