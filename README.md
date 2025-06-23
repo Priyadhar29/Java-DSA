@@ -1,43 +1,86 @@
-Java DSA Repository
+# Java-DSA 🚀
 
-Welcome to the Java DSA repository! This repository is dedicated to all things related to Java programming and data structures and algorithms (DSA). Whether you're a beginner looking to learn the basics or an experienced developer wanting to brush up on your skills, this repository has something for everyone.
+Welcome to the **Java DSA** repository!  
+This project is your personal learning journey through Java programming and Data Structures & Algorithms (DSA). Whether you're a beginner starting from scratch or a developer brushing up for interviews, there's something here for everyone.
 
-📚 Content Overview
+---
 
-1. Java Basics
-    A comprehensive guide covering fundamental concepts of Java programming, including:
-        Data Types
-        Control Structures (if-else, loops)
-        Functions and Methods
-        Object-Oriented Programming (OOP) principles
-        Exception Handling
+## 📚 Content Overview
 
-2. Practice Problems
-    A collection of practice problems designed to enhance your understanding of Java concepts and DSA. Problems are categorized by difficulty level:
-        Beginner: Simple problems to get you started with Java syntax and basic logic.
-        Intermediate: Problems that require a deeper understanding of data structures and algorithms.
-        Advanced: Challenging problems that test your problem-solving skills and algorithmic thinking.
+### 🔹 Java Basics
+A comprehensive guide to fundamental Java concepts:
+- Data Types
+- Control Structures (`if`, `else`, `for`, `while`, etc.)
+- Functions & Methods
+- Object-Oriented Programming (OOP):
+  - Encapsulation
+  - Abstraction
+  - Inheritance
+  - Polymorphism
+- Exception Handling
+- Static vs Non-Static
+- Wrapper Classes, Final Keyword
+- Memory Allocation
+- Constructors, Singleton Classes
 
-3. Solutions
-    Detailed solutions to the practice problems, including:
-        Step-by-step explanations
-        Code snippets
-        Time and space complexity analysis
+### 🔹 DSA in Java (Day-wise Practice)
+Organized learning path with daily topics and practice:
+- **DAY 1–8**: Java Fundamentals and OOPs
+- **DAY 9–11**: Deep dive into OOPs concepts
+- **DAY 12–17**: Arrays, ArrayList, Searching & Sorting Algorithms
+  - Linear Search
+  - Binary Search (1D and 2D)
+  - Bubble Sort
+  - Insertion Sort
+  - Selection Sort
 
-🛠️ Technologies Used
-    Java: The primary programming language used for all examples and practice problems.
-    Git: For version control and collaboration.
-    Markdown: For documentation and formatting.
+### 🔹 Practice Problems
+Solve real-world coding challenges:
+- Beginner: Syntax + logic practice
+- Intermediate: Arrays, Loops, Functions
+- Advanced: Optimized DSA techniques
 
-📫 Contact
-    If you have any questions, suggestions, or feedback, feel free to reach out!
+Example:
+- ✅ Product of Even Index Elements
 
-    📧 Email: keerthi29052004@gmail.com
-    💼 LinkedIn: https://www.linkedin.com/in/priya-dharshini-s29/
+---
 
-✍️ Random Dev Quote
-    "The errors which arise from the absence of facts are far more numerous and more durable than those which result from unsound reasoning respecting true data."
-        - Charles Babbage
+## 🧠 Solutions
+Each problem includes:
+- ✅ Code implementation (in Java)
+- ✅ Step-by-step explanation
+- ✅ Time & Space complexity analysis
 
-🎉 Happy Coding!
-Dive in, explore, and enjoy your journey through Java programming and data structures! Remember, practice makes perfect. Good luck! 🚀
+---
+
+
+---
+
+## 🛠️ Technologies Used
+
+- **Java**: Main programming language
+- **Git & GitHub**: Version control and project hosting
+- **Markdown**: For documentation
+
+---
+
+## 📫 Contact
+
+Feel free to reach out for questions, collaboration, or guidance!
+
+- 📧 **Email**: keerthi29052004@gmail.com  
+- 💼 **LinkedIn**: [Priya Dharshini S](https://www.linkedin.com/in/priya-dharshini-s29/)
+
+---
+
+## ✍️ Random Dev Quote
+
+> "The errors which arise from the absence of facts are far more numerous and more durable than those which result from unsound reasoning respecting true data."  
+> — *Charles Babbage*
+
+---
+
+## 🎉 Happy Coding!
+
+Dive in, explore, and enjoy your journey through Java programming and DSA.  
+**Remember**: Practice makes progress — keep learning, keep coding! 💻.
