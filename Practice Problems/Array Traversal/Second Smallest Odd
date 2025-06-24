@@ -1,0 +1,57 @@
+Problem
+Given an array of integers, find and display the second-smallest odd number present in the array.
+
+Input Format
+The first line contains an integer N, the size of the array. The second line contains N space-separated integers representing the array elements.
+
+Output Format
+Print the second-smallest odd number present in the array. If less than two odd numbers are present, print -1.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+6
+2 4 6 8 10 12
+Sample Output 1
+
+-1
+Sample Input 2
+
+7
+1 2 3 4 5 6 7
+Sample Output 2
+
+3
+Constraints
+1 <= N <= 10^5, -10^9 <= Array Elements <= 10^9
+
+CODE:
+
+import java.util.Scanner;
+
+public class SecondSmallestOdd {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        System.out.print(secSmallOdd(arr));
+    }
+    public static int secSmallOdd(int[] arr){
+        int firstOdd = Integer.MAX_VALUE;
+        int secondOdd = Integer.MAX_VALUE;
+        for (int num : arr) {
+            if (num % 2 != 0 && num < firstOdd) {
+              secondOdd = firstOdd;
+              firstOdd = num;
+            } else if (num < secondOdd && num % 2 != 0 && num != firstOdd) {
+              secondOdd = num;
+              return secondOdd;
+            }
+        }
+        return -1; 
+    }
+}
