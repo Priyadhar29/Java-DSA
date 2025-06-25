@@ -3,21 +3,22 @@ Write a program to find the sum of the first and last digit of a given number.
 
 Input Format
 An integer N (0 <= N <= 10^9) representing the input number.
+
 Output Format
 Print the sum of the first and last digit of N.
-Sample Inputs & Outputs
-Sample Input 1
 
+Sample Inputs & Outputs
+
+Sample Input 1
 12345
 Sample Output 1
-
 6
-Sample Input 2
 
+Sample Input 2
 87654321
 Sample Output 2
-
 9
+
 Constraints
 0 <= N <= 10^9
 
