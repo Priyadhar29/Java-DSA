@@ -1,0 +1,41 @@
+Problem
+Generate a string of size n consisting only of character ch.
+
+Input Format
+The input consists of an integer n and a character ch separated by a space.
+
+Output Format
+Print a string of size n consisting only of character ch.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5 x
+Sample Output 1
+
+xxxxx
+Sample Input 2
+
+3 *
+Sample Output 2
+
+***
+Constraints
+n will be a non-negative integer. ch will be a printable ASCII character.
+
+Code:
+
+import java.util.Scanner;
+
+public class StringGenerator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        char ch = scanner.next().charAt(0);
+
+        String result = String.valueOf(ch).repeat(n);
+        System.out.println(result);
+
+    }
+}
