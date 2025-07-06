@@ -1,0 +1,31 @@
+Given a string s, write a program to remove duplicate words from the string and print them in the order of their first occurrence
+
+Input:
+
+fear leads to anger anger leads to hatred hatred leads to conflict conflict leads to suffering
+
+Output:
+
+fear leads to anger hatred conflict suffering
+
+Code:
+
+import java.util.Scanner;
+import java.util.LinkedHashSet;
+public class main{
+  public static void main(String[] args){  
+    Scanner sc =  new Scanner(System.in);
+    String s= sc.nextLine();
+    remDuplicateWords(s);
+  }
+  public static void remDuplicateWords(String s){
+    LinkedHashSet <String> set = new LinkedHashSet<String>();
+    String[] ar = s.split(" ");
+    for(String x:ar){
+       set.add(x);
+    }
+    for(String x:set){
+       System.out.println(x);
+    }
+  }
+}
