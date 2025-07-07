@@ -8,18 +8,19 @@ Output Format
 - Print the product of all digits present in N.
 
 Sample Inputs & Outputs
+
 Sample Input 1
-
 1234
+
 Sample Output 1
-
 24
+
 Sample Input 2
-
 98765
-Sample Output 2
 
+Sample Output 2
 15120
+
 Constraints
 1 <= N <= 10^9
 
@@ -41,10 +42,3 @@ class Main{
         System.out.print(res);
     }
 }
-
-
-
-
-
-
-
