@@ -27,3 +27,34 @@ Constraints
 
 Code:
 
+import java.util.LlinkedHashSet;
+import java.util.Set;
+import java.util.Map.Entry;
+import java.util.Scanner;
+
+public class main{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for(int i=0;i<n;i++){
+       arr[i] = sc.nextInt();
+    }
+    freElement(arr);
+  }
+  public static void freElement(int[] arr){
+    LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
+    for(int i=0;i<arr.length;i++){
+      map.put(arr[i], map.getOrDefault(arr[i],0)+1);
+    }
+    int count = 0;
+    int ans = 0;
+    Set<Entry<Integer, Integer>> entries = map.entrySet();
+    for(Entry<Integer, Integer> entry : entries){
+      if(entry.getValue() > count){
+       count = entry.getValue();
+       ans = entry.getKey();
+      }
+    }
+    System.out.print(ans);
+  }
+}
