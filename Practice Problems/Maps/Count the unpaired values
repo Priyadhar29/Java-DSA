@@ -1,0 +1,44 @@
+Count the unpaired values in the given array
+
+Input:
+8
+1 2 3 2 3 4 4 4 
+
+Output:
+2
+
+Code:
+
+import java.util.LinkedHashMap;
+import java.util.Collection;
+import java.util.Map.Entry;
+import java.util.Scanner;
+
+public class main{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int[] arr = new int[n];
+    for(int i=0;i<n;i++){
+       arr[i] = sc.nextInt();
+    }
+    arrOcc(arr);
+  }
+  public static void arrOcc(int[] arr){
+    LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
+    for(int i=0;i<arr.length;i++){
+      if(map.containsKey(arr[i])){
+        int c = map.get(arr[i]);
+        map.put(arr[i],c+1);
+      }else{
+        map.put(arr[i],1);
+      }
+    }
+    Collection<Integer> values = map.values();
+    int count = 0;
+    for(int x:values){
+        count += x%2;
+    }
+    System.out.print(count);
+  }
+}
