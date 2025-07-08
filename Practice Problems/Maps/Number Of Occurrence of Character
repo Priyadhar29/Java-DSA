@@ -1,0 +1,42 @@
+Problem:
+Given a string s , write a program to count the number of occurrences of each character and 
+concatenate the counts to the corresponding characters, 
+maintaining the order of their first appearance in the string.
+
+INPUT:
+mississippi
+
+OUTPUT:
+m1i4s4p2
+
+Code:
+
+import java.util.Scanner;
+import java.util.Set;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+
+public class Charocc{
+  public static void main(String[] args){
+      Scanner sc = new Scanner(System.in);
+      String s = sc.nextLine();
+      countOcc(s);
+  }
+  public static void countOcc(String s){
+     LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+     for(int i=0;i<s.length();i++){
+        char ch = s.charAt(i);
+        if(map.containsKey(ch)){
+          int  c = map.put(ch);
+          map.put(ch,c+1);
+        }
+        else{
+          map.put(ch,1);
+        }
+     }
+     Set<Entry<Character, Integer>> entries = map.entrySet();
+     for(Entry<Character, Integer> entry : entries){
+        System.out.print(entry.getKey()+ "" + entry.getValue());
+     }
+  }
+}
