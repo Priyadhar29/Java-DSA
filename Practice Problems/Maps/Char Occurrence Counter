@@ -42,7 +42,7 @@ The string length will not exceed 10,000 characters. The string may contain ASCI
 
 Code:
 
-import java.util.LlinkedHashSet;
+import java.util.LlinkedHashMap;
 import java.util.Set;
 import java.util.Map.Entry;
 import java.util.Scanner;
