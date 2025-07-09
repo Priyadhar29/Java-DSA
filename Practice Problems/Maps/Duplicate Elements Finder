@@ -1,0 +1,74 @@
+Problem
+Given an array of integers, Write a program to print all the duplicate elements present in the array by insertion order and each duplicate element should be printed in new line.
+
+Input Format
+The first line consists of N, size of the array
+
+Second line consists of N space separated integers which are the elements of the array
+
+Output Format
+Print all the duplicate elements present in the array on new line.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+7
+1 2 3 2 4 3 5
+Sample Output 1
+
+2
+3
+Sample Input 2
+
+10
+4 5 9 11 9 4 8 15 8 6
+Sample Output 2
+
+4
+9
+8
+Constraints
+1 <= T <= 10 1 <= N <= 100000 1 <= HEIGHTS[i] <= 10001 <= N <= 10^5
+
+-10^5 <= arr[i] <= 10^5
+
+Code:
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class DuplicateElements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the size of the array
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
+        
+        // Read the elements of the array
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        
+        printDuplicates(arr);
+        
+        scanner.close();
+    }
+
+    public static void printDuplicates(int[] arr) {
+        LinkedHashMap<Integer, Integer> frequencyMap = new LinkedHashMap<>();
+        
+        // Count the frequency of each element
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        // Print the duplicate elements
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey());
+            }
+        }
+    }
+}
