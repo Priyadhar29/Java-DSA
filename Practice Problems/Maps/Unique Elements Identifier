@@ -1,0 +1,74 @@
+Problem
+Develop a program that reads an array of integers and prints all the elements that occur exactly once.
+
+Input Format
+The first line contains a single integer N, the number of elements in the array.
+
+The second line contains N space-separated integers, the elements of the array.
+
+Output Format
+Print the elements that occur exactly once in the array, each on a new line. If no unique elements print “No Unique Elements”
+
+Sample Inputs & Outputs
+Sample Input 1
+
+7
+1 2 3 2 4 3 5
+Sample Output 1
+
+1
+4
+5
+Sample Input 2
+
+10
+4 5 9 11 9 4 8 15 8 6
+Sample Output 2
+
+5
+11
+15
+6
+
+Code:
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class UniqueElements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the size of the array
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
+        
+        // Read the elements of the array
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        
+        printUnique(arr);
+    }
+
+    public static void printUnique(int[] arr) {
+        LinkedHashMap<Integer, Integer> frequencyMap = new LinkedHashMap<>();
+        boolean found = false;
+        // Count the frequency of each element
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        // Print the duplicate elements
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            if (entry.getValue() <= 1) {
+                System.out.println(entry.getKey());
+                found = true;
+            }
+        }
+        if(!found){
+            System.out.print("No Unique Elements");
+        }
+    }
+}
