@@ -26,5 +26,24 @@ These problems help in understanding the working of Map-based data structures an
    git clone https://github.com/Priyadhar29/Java-DSA.git
 2. Navigate to this folder:
 
-cd Java-DSA/Practice\ Problems/Maps
+   cd Java-DSA/Practice\ Problems/Maps
 
+📚 Sample Use-Cases
+Count the frequency of characters in a string.
+
+Find the first non-repeating character.
+
+Detect if two strings are anagrams.
+
+Count occurrences of elements in an array.
+
+Sort map entries by key or value.
+
+## 🤝 Contributions
+Feel free to fork this repo, suggest improvements, or add new problems by opening a pull request. Contributions are welcome!
+
+## 📇 Author
+Priya Dharshini
+📌 GitHub Profile
+
+##🧠 Mastering Maps in Java can significantly boost your problem-solving skills for coding interviews and real-world applications.
