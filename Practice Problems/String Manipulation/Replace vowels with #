@@ -1,3 +1,28 @@
+Problem
+Given a string, replace all vowels with '#'.
+
+Input Format
+A single string containing alphabets.
+
+Output Format
+A string with all vowels replaced by '#'.
+
+Sample Inputs & Outputs
+Sample Input 1
+Hello
+
+Sample Output 1
+H#ll#
+
+Sample Input 2
+world
+
+Sample Output 2
+w#rld
+
+Constraints
+The length of the string is at most 10^4.
+
 Code
 import java.util.Scanner;
 
