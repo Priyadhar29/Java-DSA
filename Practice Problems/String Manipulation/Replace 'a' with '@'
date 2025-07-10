@@ -1,0 +1,38 @@
+Problem
+Given a string, replace all 'a' with '@'.
+
+Input Format
+A single string containing alphabets.
+
+Output Format
+A string with all 'a' replaced by '@'.
+
+Sample Inputs & Outputs
+
+Sample Input 1
+banana
+
+Sample Output 1
+b@n@n@
+
+Sample Input 2
+apple
+
+Sample Output 2
+@pple
+
+Code
+import java.util.Scanner;
+
+public class Replace {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine(); // Read the input string
+
+        // Replace 'a'  with "@"
+        String replaceString = inputString.replaceAll("a", "@");
+
+        System.out.println(replaceString); // Print the Replace string    
+    }
+}
