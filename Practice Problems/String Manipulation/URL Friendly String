@@ -1,0 +1,40 @@
+Problem
+Given a string, replace all spaces with '%20' to create a URL-friendly string.
+
+Input Format
+A single string containing alphabets and spaces.
+
+Output Format
+A string with spaces replaced by '%20'.
+
+Sample Inputs & Outputs
+Sample Input 1
+Mr John Smith
+
+Sample Output 1
+Mr%20John%20Smith
+
+Sample Input 2
+Hello World
+
+Sample Output 2
+Hello%20World
+
+Constraints
+The length of the string is at most 10^4.
+
+Code
+import java.util.Scanner;
+
+public class URLifyString {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine(); // Read the input string
+
+        // Replace all occurrences of a space " " with "%20"
+        String urlFriendlyString = inputString.replaceAll(" ", "%20");
+
+        System.out.println(urlFriendlyString); // Print the URL-friendly string
+    }
+}
