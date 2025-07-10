@@ -1,0 +1,15 @@
+Code
+import java.util.Scanner;
+
+public class Replace {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine(); // Read the input string
+
+        // Replace vowels with "#"
+        String replaceString = inputString.replaceAll("[aeiouAEIOU]", "#");
+
+        System.out.println(replaceString); // Print the Replace string    
+    }
+}
