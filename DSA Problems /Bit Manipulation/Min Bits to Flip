@@ -1,0 +1,70 @@
+Problem
+Given two integers a and b, find the smallest number of bits that need to be flipped in their binary representations to make the two integers identical. A bit flip changes a 1 to a 0 or a 0 to a 1 in the binary representation.
+
+Input Format
+First line contains an integer a.
+
+Second line contains an integer b.
+
+Output Format
+Print the smallest number of bits that need to be flipped to make a and b identical.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+29
+15
+Sample Output 1
+
+2
+Sample Input 2
+
+5
+9
+Sample Output 2
+
+2
+
+✅ Approach
+XOR the two numbers:
+a ^ b gives a number where the bits are 1 only where a and b differ.
+
+Count the number of 1s in the result:
+Use Integer.bitCount(xor) to count how many bits differ.
+
+💻 Java Code:
+import java.util.Scanner;
+
+public class BitFlipsToMakeEqual {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int xor = a ^ b;  // XOR to find differing bits
+        int count = Integer.bitCount(xor);  // Count number of differing bits (set bits in xor)
+
+        System.out.println(count);
+    }
+}
+🔍 Explanation
+
+Sample Input 1:
+a = 29  → Binary: 11101  
+b = 15  → Binary: 01111  
+XOR     →         10010  
+10010 has 2 set bits, so answer is 2.
+
+Sample Input 2:
+a = 5   → Binary: 0101  
+b = 9   → Binary: 1001  
+XOR     →         1100  
+1100 has 2 set bits, so answer is 2.
+
+✅ Output:
+2
+
+📌 Key Concept:
+Hamming Distance: Number of differing bits between two binary numbers.
+
+Integer.bitCount(n) is a fast, built-in way to count 1s in binary.
