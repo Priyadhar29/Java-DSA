@@ -1,0 +1,64 @@
+✅ Problem Statement
+Given an integer n, find the minimum number of bits needed to represent n in binary.
+
+This means: how many binary digits (1s and 0s) are needed to represent n.
+
+📥 Input Format
+A single integer n
+
+📤 Output Format
+An integer representing the minimum number of bits needed
+
+🔢 Sample Input/Output
+8
+Sample Output 1
+4
+Explanation:
+Binary of 8 → 1000 → 4 bits
+
+Sample Input 2
+7
+Sample Output 2
+3
+Explanation:
+Binary of 7 → 111 → 3 bits
+
+💡 Approach
+Use the formula:
+Number of bits = floor(log2(n)) + 1
+But in Java, we can use:
+Integer.toBinaryString(n).length()
+Or more efficiently:
+32 - Integer.numberOfLeadingZeros(n)
+
+💻 Java Code
+
+import java.util.Scanner;
+
+public class MinimumBitsToRepresent {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        // Calculate number of bits needed to represent n
+        int bits = 32 - Integer.numberOfLeadingZeros(n);
+        
+        System.out.println(bits);
+    }
+}
+
+🧠 Explanation of Key Method:
+Integer.numberOfLeadingZeros(n)
+
+Returns number of 0s before the first 1 in the 32-bit binary of n
+
+Subtracting from 32 gives us the position of the highest set bit (aka number of bits needed)
+
+✅ Summary
+
+| Number | Binary   | Minimum Bits |
+| ------ | -------- | ------------ |
+| 8      | 1000     | 4            |
+| 7      | 0111     | 3            |
+| 1      | 0001     | 1            |
+| 255    | 11111111 | 8            |
