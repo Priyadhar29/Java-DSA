@@ -1,0 +1,75 @@
+Problem
+To find the Kth bit (0-indexed) in the binary representation of a given number n, first convert the number into its binary form. Then, count the bits from right to left, starting at 0 for the rightmost bit. The Kth bit is simply the bit located at position K in this binary sequence, where the bit can either be 0 or 1.
+
+For example, if n=13 (which is 1101 in binary) and you are looking for the 2nd bit, you would get 1, as it is the third bit from the right.
+
+Input Format
+First line contains an integer which represents n.
+
+Second line contains an integer which represents k.
+
+Output Format
+The Kth bit of n.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+13
+2
+Sample Output 1
+
+1
+Sample Input 2
+
+5
+1
+Sample Output 2
+
+0
+Constraints
+0 ≤ n ≤ 10^9 0 ≤ k < 32
+
+Solution:
+To find the k-th bit from the right (0-based indexing from the least significant bit, i.e., rightmost bit), you can use bit masking and shifting.
+
+✅ Problem Statement
+Given two integers:
+
+n — the number
+
+k — the bit position (starting from 0 at the rightmost bit)
+
+Print the k-th bit in the binary representation of n.
+
+📥 Sample Input 1:
+13 2
+
+🧮 Explanation:
+Binary of 13 = 1101
+Bit at position 2 (from right, 0-based) = 1 → Output: 1
+
+📥 Sample Input 2:
+5 1
+
+🧮 Explanation:
+Binary of 5 = 0101
+Bit at position 1 = 0 → Output: 0
+
+💻 Java Code
+import java.util.Scanner;
+
+public class KthBitFinder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        // Right shift 'n' by 'k' bits and AND with 1 to get the kth bit
+        int kthBit = (n >> k) & 1;
+        System.out.println(kthBit);
+    }
+}
+🔑 Logic:
+(n >> k) moves the kth bit to the 0th (rightmost) position.
+
+& 1 masks all other bits, giving only the least significant bit (which is now the original kth bit).
