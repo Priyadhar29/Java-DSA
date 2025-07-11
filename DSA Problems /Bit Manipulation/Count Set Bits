@@ -1,0 +1,32 @@
+Problem
+Count the number of set bits (1s) in the binary representation of a given integer. The input is an integer n, and the output should be an integer representing the number of set bits in the binary representation of n.
+
+Input Format
+An integer n (0 ≤ n ≤ 10^9).
+
+Output Format
+An integer representing the number of set bits.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+15
+Sample Output 1
+
+4
+Constraints
+0 ≤ n ≤ 10^9
+
+Code:
+import java.util.Scanner;
+
+public class CountSetBits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        // Count the number of 1s in the binary representation
+        int count = Integer.bitCount(n);
+        System.out.println(count);
+    }
+}
