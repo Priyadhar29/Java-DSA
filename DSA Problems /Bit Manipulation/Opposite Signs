@@ -1,0 +1,51 @@
+# Opposite Signs Checker using Bitwise Operators in Java
+
+## 🧠 Problem Statement
+
+Determine if two integers `a` and `b` have **opposite signs** using **bitwise operators** in Java.
+
+## ✅ Input Format
+
+- First line contains an integer `a`
+- Second line contains an integer `b`
+
+## ✅ Output Format
+
+- Print `true` if `a` and `b` have opposite signs
+- Otherwise, print `false`
+
+## 🔍 Explanation
+
+Two integers have opposite signs if one is positive and the other is negative.
+
+Using the XOR (`^`) bitwise operator:
+- If `(a ^ b)` results in a negative number, their sign bits are different → they have opposite signs.
+
+## 💡 Sample Input 1
+-5
+3
+
+
+## ✅ Sample Output 1
+true
+
+## 📌 Constraints
+-10^9 ≤ a, b ≤ 10^9
+
+
+## 💻 Java Code
+
+```java
+import java.util.Scanner;
+
+public class OppositeSignsChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        // Check if a and b have opposite signs using bitwise XOR
+        boolean oppositeSigns = ((a ^ b) < 0);
+        System.out.println(oppositeSigns);
+    }
+}
