@@ -1,0 +1,41 @@
+Problem
+Calculate the XOR of all elements in the given array.
+
+Input Format
+First line: Integer n – number of elements in the array.
+
+Second line: n space-separated integers.
+
+Output Format
+A single integer is the result of XORing all the elements.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+4
+2 4 6 8
+Sample Output 1
+
+8
+Constraints
+- 1 ≤ arr.length ≤ 10^5
+
+Code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt(); // Read number of elements
+        int xor = 0;
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt(); // Read each element
+            xor ^= arr[i];             // XOR with accumulator
+        }
+        
+        System.out.println(xor); // Output final XOR result
+    }
+}
+
