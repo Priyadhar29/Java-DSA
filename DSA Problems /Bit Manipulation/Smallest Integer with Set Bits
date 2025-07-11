@@ -1,0 +1,89 @@
+✅ Problem Summary
+Given two integers a and b, find the smallest integer x such that:
+x >= a
+x has the same number of set bits (1s in binary) as b.
+
+📥 Input Format
+One line with two integers: a and b
+
+📤 Output Format
+Print the smallest integer x that satisfies the above conditions
+
+🔢 Sample Input/Output
+Sample Input 1
+10 6
+Sample Output 1
+10
+
+Explanation:
+Binary of 10 = 1010 → 2 set bits
+
+Binary of 6 = 0110 → 2 set bits
+✅ 10 already satisfies both conditions
+
+Sample Input 2
+5 3
+
+Sample Output 2
+5
+
+Explanation:
+Binary of 5 = 0101 → 2 set bits
+
+Binary of 3 = 0011 → 2 set bits
+✅ 5 already satisfies both conditions
+
+💡 Approach
+Count number of set bits in b.
+
+Starting from a, check each number x:
+
+If x has same number of set bits as b, print and break.
+
+Efficient enough because:
+
+The max number of 1s in any 32-bit integer is 32
+
+We just loop forward until match is found
+
+💻 Java Code
+
+import java.util.Scanner;
+
+public class SmallestXWithEqualSetBits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int setBitsB = Integer.bitCount(b); // Count of 1s in b
+
+        int x = a;
+        while (true) {
+            if (Integer.bitCount(x) == setBitsB) {
+                System.out.println(x);
+                break;
+            }
+            x++;
+        }
+    }
+}
+
+⏱️ Time Complexity
+Worst-case time: O(n) where n is the distance to the next number with matching set bits (can go up to ~32 iterations in most cases)
+
+Efficient in practice for input limits up to 10⁹
+
+INPUT: a=5  b=3
+     b = 3 → binary: 0011 → set bits = 2
+     Start with x = 5 → binary: 0101 → set bits = 2 ✅
+
+So, output is: 5
+
+✅ Summary
+
+| Step              | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| `bitCount(b)`     | Counts number of `1`s in binary of `b`         |
+| Loop from `x = a` | Search for smallest `x ≥ a` with same set bits |
+| Print when match  | Stops when `bitCount(x) == bitCount(b)`        |
