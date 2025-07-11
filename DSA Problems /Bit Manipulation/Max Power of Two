@@ -1,0 +1,46 @@
+Problem
+Find the largest power of two that is less than or equal to a given integer n. For example, if n = 20, the largest power of two less than or equal to 20 is 16.
+
+Input Format
+An integer n (0 ≤ n ≤ 10^9).
+
+Output Format
+The largest power of two less than or equal to n.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+20
+Sample Output 1
+
+16
+Constraints
+0 ≤ n ≤ 10^9
+
+✅ Java Code:
+import java.util.Scanner;
+
+public class LargestPowerOfTwo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int res = 1;
+        while (res * 2 <= n) {
+            res *= 2;
+        }
+
+        System.out.println(res);
+    }
+}
+🧠 Explanation:
+Start with res = 1 (which is 2⁰).
+
+Keep doubling it (res *= 2) until it becomes greater than n.
+
+The last valid value before it exceeded n is your answer.
+
+🧪 Example:
+Input: 20
+Binary powers of 2 up to 20: 1, 2, 4, 8, 16
+Output: 16
