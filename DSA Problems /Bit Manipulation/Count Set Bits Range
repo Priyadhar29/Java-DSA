@@ -1,0 +1,47 @@
+Problem
+Count the total number of set bits in the binary representations of all integers from 0 to n.
+
+Input Format
+An integer n .
+
+Output Format
+The total number of set bits.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+5
+Sample Output 1
+
+7
+Sample Input 2
+
+7
+Sample Output 2
+
+12
+Constraints
+0 ≤ n ≤ 10^9
+
+Code:
+import java.util.Scanner;
+
+public class TotalSetBits {
+    public static int countSetBits(int n) {
+        int count = 0;
+        for (int i = 0; (1 << i) <= n; i++) {
+            int blockSize = 1 << (i + 1);
+            int fullBlocks = (n + 1) / blockSize;
+            int remainder = (n + 1) % blockSize;
+            count += fullBlocks * (blockSize / 2);
+            count += Math.max(0, remainder - (blockSize / 2));
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(countSetBits(n));
+    }
+}
