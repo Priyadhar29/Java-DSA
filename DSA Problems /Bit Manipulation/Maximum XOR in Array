@@ -1,0 +1,96 @@
+Problem
+Given an integer array, find the maximum XOR of two distinct numbers in the array. XOR is a bitwise operation that results in 1 for each pair of differing bits and 0 for each pair of the same bits. Your task is to maximize the XOR value from any two numbers in the array.
+
+Input Format
+The first line contains an integer n, representing the size of the array.
+
+The second line contains n integers representing the elements of the array.
+
+Output Format
+Print the maximum XOR value that can be obtained from any two numbers in the array.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+6 
+3 10 5 25 2 8
+Sample Output 1
+
+28
+Sample Input 2
+
+4 
+1 2 3 4
+Sample Output 2
+
+7
+Constraints
+1 <= n <= 100000, 1 <= arr[i] <= 10^9
+
+Code:
+
+import java.util.Scanner;
+
+class Main{
+  public static void main(String[] args){
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int[] arr = new int[n];
+      for(int i=0;i<n;i++){
+        arr[i] = sc.nextInt();
+      }
+      System.out.print(maxXor(arr,n));
+  }
+  public static int maxXor(int[]arr){
+      int maxXor = 0;
+      int n = arr.length;
+      for (int i = 0; i < n; i++) {
+          for (int j = i + 1; j < n; j++) {
+              maxXor = Math.max(maxXor, arr[i] ^ arr[j]);
+          }
+      }
+      return maxXor;
+  }
+}
+
+🔍 Explanation
+🧩 Part by Part:
+✅ arr[i] ^ arr[j] → Bitwise XOR of two numbers
+The ^ operator performs a bitwise XOR between two integers.
+
+It returns a number where each bit is 1 if the bits in arr[i] and arr[j] differ, otherwise 0.
+
+Example:
+
+arr[i] = 5 (0101)
+arr[j] = 25 (11001)
+5 ^ 25 = 28 (11100)
+
+✅ Math.max(a, b) → Returns the larger of two numbers
+Math.max(x, y) returns the maximum of x and y.
+
+✅ maxXor = Math.max(maxXor, arr[i] ^ arr[j]);
+This line:
+
+Calculates the XOR of the current pair: arr[i] ^ arr[j]
+
+Compares it with the current maximum XOR value (maxXor)
+
+Updates maxXor only if the new XOR is larger
+
+🔄 Example Execution:
+Given:
+arr = [3, 10, 5]
+
+Initial:
+maxXor = 0
+
+Loop steps:
+
+3 ^ 10 = 9 → maxXor = Math.max(0, 9) = 9
+
+3 ^ 5 = 6 → maxXor = Math.max(9, 6) = 9
+
+10 ^ 5 = 15→ maxXor = Math.max(9, 15) = 15
+
+✅ Final maxXor = 15
