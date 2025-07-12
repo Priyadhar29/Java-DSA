@@ -1,0 +1,90 @@
+Problem
+Given an integer n, your task is to find the number that corresponds to the most significant bit (MSB) set to 1 in the binary representation of n. The most significant bit is the highest bit position in the binary form of the number that holds the value 1.
+
+For example, if n is represented as a binary number, you need to identify the bit with the highest position that is set to 1, and return the value that this bit represents in decimal form. This value is always a power of 2.
+
+Input Format
+An integer n (0 ≤ n ≤ 10^9).
+
+Output Format
+The number with the most significant bit set.
+
+Sample Inputs & Outputs
+Sample Input 1
+
+19
+Sample Output 1
+
+16
+Constraints
+0 ≤ n ≤ 10^9
+
+Code:
+
+import java.util.Scanner;
+
+public class MostSignificantBitWithoutInbuilt {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        if (n == 0) {
+            System.out.println(0);
+            return;
+        }
+
+        int msb = 1;
+        while (n > 1) {
+            n = n >> 1;
+            msb = msb << 1;
+        }
+
+        System.out.println(msb);
+    }
+}
+
+Explanation: 
+📌 if (n == 0) { System.out.println(0); return; }
+Edge case: If the input is 0, then no bits are set. So the output is 0.
+
+return; exits the program early.
+
+📌 int msb = 1;
+msb is initialized to 1, which is the smallest power of 2.
+
+We'll keep doubling it (left shift) until we reach the position of the most significant bit in n.
+
+📌 while (n > 1)
+This loop continues until n becomes 1.
+
+We're reducing n by right shifting its bits one by one.
+
+At the same time, we’re left shifting msb to track how many times we shifted n.
+
+📌 Inside Loop:
+
+n = n >> 1;
+Right shift: n >> 1 divides n by 2 (integer division) and removes the last bit.
+
+We're moving toward the MSB by shrinking the number.
+
+msb = msb << 1;
+Left shift: msb << 1 multiplies msb by 2, moving to the next power of 2.
+
+Tracks the value of the MSB.
+
+📌 Example for n = 9
+Binary of 9: 1001
+
+MSB is 2^3 = 8
+
+Loop:
+
+n = 9 → 4 → 2 → 1
+
+msb = 1 → 2 → 4 → 8
+
+When n becomes 1, loop stops and we print msb = 8.
+
+📌 System.out.println(msb);
+Outputs the value of the most significant bit.
