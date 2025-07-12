@@ -1,0 +1,67 @@
+Problem
+Reverse the bits of a given 32-bit unsigned integer.
+
+Input Format
+- An integer n (0 ≤ n ≤ 2^32 - 1).
+
+Output Format
+- The integer obtained by reversing the bits of n.
+
+Sample Inputs & Outputs
+Sample Input 1
+43261596
+
+Sample Output 1
+964176192
+
+Constraints
+- 0 ≤ n ≤ 2^32 - 1
+
+Code:
+import java.util.Scanner;
+
+public class ReverseBits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long n = scanner.nextLong();  // Use long to accept 32-bit unsigned range
+
+        long result = reverseBits(n);
+        System.out.println(result);
+    }
+
+    public static long reverseBits(long n) {
+        long reversed = 0;
+
+        for (int i = 0; i < 32; i++) {
+            long lastBit = n & 1;        // Get last bit
+            reversed = (reversed << 1) | lastBit; // Shift left and add bit
+            n = n >> 1;                  // Shift n right
+        }
+
+        return reversed;
+    }
+}
+
+🧠 How the Code Works
+Step-by-step:
+
+Loop 32 times (for 32 bits).
+
+Extract the last bit using n & 1.
+
+Shift the reversed number left by 1 to make space for the new bit.
+
+Add the extracted bit to reversed using OR |.
+
+Right shift the input number n by 1.
+
+Continue until all 32 bits are processed.
+
+🧪 Sample Execution:
+Input: 43261596
+Binary:      00000010100101000001111010011100
+Reversed:    00111001011110000010100101000000
+Decimal:     964176192
+
+✅ Output:
+964176192
