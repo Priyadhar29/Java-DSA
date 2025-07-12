@@ -57,6 +57,69 @@ Right shift the input number n by 1.
 
 Continue until all 32 bits are processed.
 
+✅ Breakdown of rev = (rev << 1) | (n & 1);
+🧩 n & 1 → Get the rightmost bit
+This isolates the last (least significant) bit of n.
+
+Bitwise AND with 1 means:
+
+If n ends in 1 → result is 1
+
+If n ends in 0 → result is 0
+
+Examples:
+n = 1001 (binary) → n & 1 = 1
+n = 1000 (binary) → n & 1 = 0
+
+🧩 rev << 1 → Shift rev left by 1
+This makes space to add the new bit at the end (just like multiplying by 2).
+
+You're moving existing bits one position to the left.
+
+Example:
+rev = 00000000000000000000000000000101
+rev << 1 = 00000000000000000000000000001010
+
+🧩 | → Add the extracted bit
+Use bitwise OR to set the last bit in rev based on the last bit from n.
+
+Example:
+rev << 1 = 00000010
+n & 1     = 00000001
+OR        = 00000011
+So the bit from n gets placed into the new rightmost position of rev.
+
+🧮 Full Step Example (n = 9)
+n = 00000000000000000000000000001001
+
+Iteration 1:
+n & 1 → 1
+
+rev = 0 → rev << 1 = 0, then | 1 = 1
+
+Iteration 2:
+n >> 1 → 000...100
+
+n & 1 = 0
+
+rev = 1 << 1 = 2, then | 0 = 2
+
+Iteration 3:
+n >> 1 = 000...10
+
+n & 1 = 0
+
+rev = 2 << 1 = 4, then | 0 = 4
+
+Iteration 4:
+n >> 1 = 000...1
+
+n & 1 = 1
+
+rev = 4 << 1 = 8, then | 1 = 9
+
+And so on...
+
 🧪 Sample Execution:
 Input: 43261596
 Binary:      00000010100101000001111010011100
