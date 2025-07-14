@@ -1,0 +1,40 @@
+Problem:
+Given a string , print the word in which the word that occurs even times.
+
+Input:
+fear leads to anger anger leads to hatred hatred leads to conflict conflict leads to suffering 
+
+Output:
+leads 
+to 
+anger
+hatred 
+conflict
+
+Program:
+import java.util.Scanner;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+
+class WordOcc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        countWordOcc(s);
+    }
+
+    public static void countWordOcc(String s) {
+        String[] arr = s.split(" "); // Split by whitespace
+        LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+        
+        for (String word : arr) { // Corrected type to String
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
+        for (Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue() % 2 == 0) {
+               System.out.println(entry.getKey()); 
+            }
+        }
+        
+    }
+}
