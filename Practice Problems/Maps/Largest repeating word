@@ -1,5 +1,5 @@
 Problem:
-Given a string , print the word in which the word that occurs more than 3 times.
+Given a string , print the word in which the word that occurs more than times.
 
 Input:
 fear leads to anger anger leads to hatred hatred leads to conflict conflict leads to suffering leads
@@ -29,7 +29,7 @@ class WordOcc {
         int max = 0;
         String res ="";
         for (Entry<String, Integer> entry : map.entrySet()) {
-            if (entry.getValue()) {
+            if (entry.getValue()<max) {
                max = entry.getValue();
                res = entry.getKey(); 
             }
