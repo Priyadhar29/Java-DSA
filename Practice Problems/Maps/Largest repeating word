@@ -29,7 +29,7 @@ class WordOcc {
         int max = 0;
         String res ="";
         for (Entry<String, Integer> entry : map.entrySet()) {
-            if (entry.getValue()<max) {
+            if (entry.getValue() < max) {
                max = entry.getValue();
                res = entry.getKey(); 
             }
