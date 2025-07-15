@@ -11,20 +11,19 @@ Print the elements that occur exactly once in the array, each on a new line. If 
 
 Sample Inputs & Outputs
 Sample Input 1
-
 7
 1 2 3 2 4 3 5
-Sample Output 1
 
+Sample Output 1
 1
 4
 5
-Sample Input 2
 
+Sample Input 2
 10
 4 5 9 11 9 4 8 15 8 6
-Sample Output 2
 
+Sample Output 2
 5
 11
 15
