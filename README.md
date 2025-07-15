@@ -1,7 +1,7 @@
 # Java-DSA 🚀
 
 Welcome to the **Java DSA** repository!  
-This project is your personal learning journey through Java programming and Data Structures & Algorithms (DSA). Whether you're a beginner starting from scratch or a developer brushing up for interviews, there's something here for everyone.
+This project is your personal learning journey through Java programming and Data Structures & Algorithms (DSA). Whether you're a beginner starting from scratch or a developer brushing up for interviews, there's something here for everyone. 
 
 ---
 
