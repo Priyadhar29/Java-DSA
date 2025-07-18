@@ -38,9 +38,35 @@ Each `.java` file in this directory represents a different problem or concept re
 
 ---
 
-## 🚀 How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Priyadhar29/Java-DSA.git
-   cd Java-DSA/DSA Problems/Bit Manipulation
+##🧠 Core Bit Tricks
+
+| Expression      | Meaning                        |                   |
+| --------------- | ------------------------------ | ----------------- |
+| `x & 1`         | Checks if number is odd        |                   |
+| `x >> 1`        | Divides `x` by 2               |                   |
+| `x << 1`        | Multiplies `x` by 2            |                   |
+| `x & (x - 1)`   | Removes the rightmost set bit  |                   |
+| \`x             | (1 << i)\`                     | Sets the i-th bit |
+| `x & ~(1 << i)` | Clears the i-th bit            |                   |
+| `x ^ (1 << i)`  | Toggles the i-th bit           |                   |
+| `(x >> i) & 1`  | Gets the value of the i-th bit |                   |
+
+---
+
+## 🙌 Contributions Welcome
+Feel free to:
+
+Add new problems or improvements
+
+Submit pull requests
+
+Open issues for bugs or suggestions
+
+### ✅ What to Do:
+- Copy and save this as `README.md` inside your `Bit Manipulation` folder.
+- Commit and push to GitHub:
+```bash
+git add "DSA Problems/Bit Manipulation/README.md"
+git commit -m "Added README for Bit Manipulation problems"
+git push
