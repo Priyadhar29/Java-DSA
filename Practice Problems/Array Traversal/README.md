@@ -33,21 +33,6 @@ The problems in this directory help you build a strong foundation in array handl
 
 ---
 
-## 🚀 How to Use
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Priyadhar29/Java-DSA.git
--
-2.Navigate to the folder:
-  ```bash
-  cd Java-DSA/Practice\ Problems/Array\ Traversal
--
-3.Compile and run any Java file:
-  ```bash
-   javac ReverseArray.java
-   java ReverseArray
-
 ## 🛠️ Requirements
 Java Development Kit (JDK) 8 or above
 
