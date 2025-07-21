@@ -34,17 +34,17 @@ The problems in this directory help you build a strong foundation in array handl
 ---
 
 ## 🛠️ Requirements
-Java Development Kit (JDK) 8 or above
+  Java Development Kit (JDK) 8 or above
 
-Basic understanding of arrays in Java
+  Basic understanding of arrays in Java
 
 ## 🙌 Contributing
-Want to add more array problems or optimize existing ones? Feel free to:
+  Want to add more array problems or optimize existing ones? Feel free to:
 
-Fork this repository
+  Fork this repository
 
-Create a new branch
+  Create a new branch
 
-Commit your changes
+  Commit your changes
 
-Open a pull request
+  Open a pull request
