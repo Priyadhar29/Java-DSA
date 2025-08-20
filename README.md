@@ -34,15 +34,13 @@ Organized learning path with daily topics and practice:
   - Insertion Sort
   - Selection Sort
 
-### 🔹 Practice Problems
-Solve real-world coding challenges:
-- Beginner: Syntax + logic practice
-- Intermediate: Arrays, Loops, Functions
-- Advanced: Optimized DSA techniques
-
-Example:
-- ✅ Product of Even Index Elements
-
+### ✅ Practice Problems
+- Basic Java Programs
+- Array Problems
+- String Manipulation
+- Recursion
+- Pattern Printing
+- Interview-Based DSA Problems
 ---
 
 ## 🧠 Solutions
@@ -53,7 +51,8 @@ Each problem includes:
 
 ---
 
-##📂 Repository Structure
+## 📂 Repository Structure
+
 Java-DSA/
 │
 ├── Basics/
@@ -102,4 +101,5 @@ Feel free to reach out for questions, collaboration, or guidance!
 
 Dive in, explore, and enjoy your journey through Java programming and DSA.  
 **Remember**: Practice makes progress — keep learning, keep coding! 💻.
+
 
