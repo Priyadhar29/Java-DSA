@@ -53,6 +53,24 @@ Each problem includes:
 
 ---
 
+##📂 Repository Structure
+Java-DSA/
+│
+├── Basics/
+│   ├── HelloWorld.java
+│   ├── ControlStatements.java
+│
+├── OOPs/
+│   ├── ClassesAndObjects.java
+│   ├── InheritanceDemo.java
+│
+├── DSA/
+│   ├── Arrays/
+│   ├── Searching/
+│   ├── Sorting/
+│
+└── PracticeProblems/
+
 
 ---
 
@@ -84,3 +102,4 @@ Feel free to reach out for questions, collaboration, or guidance!
 
 Dive in, explore, and enjoy your journey through Java programming and DSA.  
 **Remember**: Practice makes progress — keep learning, keep coding! 💻.
+
